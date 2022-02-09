@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<html >
-<head>
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
-
-</head>
-<body>
     <header>
         <nav>
             <img  alt="logo" srcset="">
@@ -21,5 +12,3 @@
             </ul>
         </nav>
     </header>
-</body>
-</html>
