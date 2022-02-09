@@ -1,0 +1,31 @@
+body{
+   background-color:#E5E5E5;
+   
+}
+main{
+    display: flex;
+   
+    justify-content: center;
+    margin:5em;
+}
+
+form h2{
+    text-align: center;
+   
+}
+form label, form input{
+    margin:1em;
+    
+}
+
+
+textarea{
+   height:25em;
+   width:33em;
+   margin:1em;
+   
+}
+.textfield{
+    width:30em;
+    height:2.5em;
+}

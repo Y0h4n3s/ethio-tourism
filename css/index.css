@@ -1,0 +1,14 @@
+.images{
+    margin-top: 7em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.images>img {
+    width: 80%;
+    background-size: streach;
+    height: 500px;
+} 

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Signup</title>
-    </head>
-    <body>
-        <header>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel='stylesheet' type='text/css' href='./css/contact.css'>
+</head>
+<body>
 
-        </header>
+<?php 
+
+include_once('header.php');
+?>
 
         <main>
             <form>
@@ -20,12 +25,14 @@
                 <label for="password-input">Password</label>
                 <input name="password-input" type="password" />
                 <br>
-                <input type="submit" value="Signup">
+                <input class='button' type="submit" value="Signup">
             </form>
         </main>
 
-        <footer>
+    
+        <?php 
 
-        </footer>
+include_once('footer.php');
+?>
     </body>
 </html>
