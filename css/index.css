@@ -7,8 +7,64 @@
 
 }
 
+main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 2em;
+}
+p{
+    color:black;
+}
+
 .images>img {
     width: 80%;
     background-size: streach;
     height: 500px;
 } 
+
+.explore-places-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    width: 70%;
+    grid-row-gap: 3em;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-areas: "img info info"
+    "img info info"
+    "img buy buy";
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    padding: 0;
+    margin: 0;
+    color: black;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: 1px 19px rgba(0, 0, 0, 0.04);
+}
+
+.destination-container>img {
+    grid-area: img;
+    max-width: 400px;
+}
+
+.destination-info {
+    grid-area: info;
+    padding: 2em;
+}
+
+.buy-package-button {
+    grid-area: buy;
+    padding: 1em 2em;
+    border-radius: 3em;
+    color: white;
+    border: none;
+    width: 15em;
+    justify-self: flex-end;
+    margin-right: 2em;
+    background-color: rgba(0, 0, 0, 0.4);
+}

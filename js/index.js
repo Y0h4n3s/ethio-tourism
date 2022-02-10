@@ -6,5 +6,5 @@ setInterval(() => {
     let idx = images.findIndex(image => "images/" + image === imgSrc)
 
 
-    imgElement.attributes.src.value = "images/" + images.at((idx + 1) % (images.length ) )
+    imgElement.attributes.src.value = "images/" + images[(idx + 1) % (images.length )]
 }, 4000)

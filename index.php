@@ -15,8 +15,30 @@
 include_once('header.php');
 ?>
     <main>
+
         <div class="images">
             <img id="images" src="images/chilada.jfif" alt="">
+        </div>
+
+        <div class="explore-places-container">
+            <h1>Explore</h1>
+            <div class="destination-container">
+                <img src="images/chilada.jfif" alt="" srcset="">
+                <div class="destination-info">
+                    <h3>Seimen Mountains</h3>
+                    <p>Ethiopia’s premier trekking and walking destination. The Siemen Mountains National Park is the only natural UNESCO register site in Ethiopia famous for hiking and trekking...
+                </div>
+                <button class="buy-package-button">Buy Package</button>
+            </div>
+
+            <div class="destination-container">
+                <img src="images/nile.jfif" alt="" srcset="">
+                <div class="destination-info">
+                    <h3>Tis Abay</h3>
+                    <p>The Blue Nile Falls is a waterfall on the Blue Nile river in Ethiopia. It is known as Tis Abay in Amharic, meaning "great smoke". It is situated on the upper course of the river, about 30 kilometres (19 mi) downstream from the town of Bahir Dar and Lake Tana. The falls are one of Ethiopia's best-known tourist attractions...
+                </div>
+                <button class="buy-package-button">Buy Package</button>
+            </div>
         </div>
     </main>
 

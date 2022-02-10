@@ -1,32 +1,31 @@
-header{
-    position: fixed;
-    background-color: #242F40;
-    height: 3em;
-    top: 0;
-    width: 100%;
+header {
+  position: fixed;
+  background-color: #242f40;
+  height: 3em;
+  top: 0;
+  width: 100%;
 }
-p{
-    color:aliceblue;
+.white-text {
+  color: aliceblue;
 }
 
 nav {
-    display: grid;
-    grid-template-columns: 1fr 2fr 5fr  ;
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr;
 }
 
-nav>ul {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: end;
+nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-nav>ul>li {
-    list-style: none;
+nav > ul > li {
+  list-style: none;
 }
 
-nav>ul>li>a {
-    text-decoration: none;
-    color: white;
-    padding: 0 0.6em;
+nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+  padding: 0 0.6em;
 }

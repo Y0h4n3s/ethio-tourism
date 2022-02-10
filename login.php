@@ -16,7 +16,7 @@
 include_once('header.php');
 ?>
     <main>
-        <form method="GET" name="login-form" action="login.php">
+        <form method="POST" name="login-form" action="login.php">
             <label for="username-input">Username</label>
             <input name="username-input"/>
             <br>
@@ -27,11 +27,24 @@ include_once('header.php');
 
             
 <?php
+require_once("connection.php");
 
+if (isset($_POST['username-input']) && isset($_POST['password-input'])){
 
-if (isset($_GET['username-input']) && isset($_GET['password-input'])){
-    echo $_GET['username-input']."<br><br>";
-    echo $_GET['password-input']."<br><br>";
+    $username = $_POST['username-input'];
+    $password = $_POST['password-input'];
+
+    $check_username_and_password_sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password';";
+    $result = mysql_query($check_username_and_password_sql, $conn);
+    $data = mysql_fetch_array($result);
+  
+   
+    if ( $data['username'] == $username && $data['password'] == $password) {
+       header("location:index.php"); 
+    } else {
+        echo "<p style='color: red;'>"."incorrect username or password"."</p>";
+
+    }
 }
 
 
