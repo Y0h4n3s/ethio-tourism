@@ -14,12 +14,13 @@ nav {
   grid-template-columns: 1fr 2fr 5fr;
 }
 
+
 nav > ul {
   display: flex;
   align-items: center;
   justify-content: end;
-}
 
+}
 nav > ul > li {
   list-style: none;
 }
