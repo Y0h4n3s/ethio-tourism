@@ -3,12 +3,19 @@ body {
     margin: 0;
     box-sizing: border-box;
     height: 100vh;
+    /*background-image: url("../images/bg.jpeg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: cornflowerblue;
+
+
 }
 
 .button{
     margin:1em 6.7em; 
     background-color: #242F40;
-    color:white;
+    color:rgb(238, 226, 226);
     border-radius: 26px;
     text-align:center;
     border:none;
