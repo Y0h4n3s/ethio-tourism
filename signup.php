@@ -1,5 +1,7 @@
 
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,6 +69,7 @@ if (isset($_POST['username-input']) && isset($_POST['password-input']) && isset(
         $result = mysqli_query($conn,$insert_sql);
 
         if ($result) {
+        $_SESSION["account-type"] = "user";  
        header("location:index.php"); 
         } else { 
             echo "<p style='color: red;'>"."registration failed"."</p>";

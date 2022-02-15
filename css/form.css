@@ -54,6 +54,15 @@
     pointer-events: none;
     transition: .5s;
   }
+  .radio {
+  
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+ 
   
   .form_container .row input:focus ~ label,
   .form_container .row input:valid ~ label {

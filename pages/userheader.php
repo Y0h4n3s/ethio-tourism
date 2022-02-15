@@ -10,7 +10,7 @@
                 <li><a href="./packages.php">Packages</a></li>
                 <li><a href="./contact.php">Contact Us</a></li>
                 <li><a href="./about.php">About Us</a></li>
-                <li><a href="./logout.php">About Us</a></li>
+                <li><a href="./logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>

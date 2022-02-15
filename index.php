@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html >
 <head>
@@ -11,8 +14,16 @@
   
 
     <?php 
-
-include_once('pages/header.php');
+    $user_model= $_SESSION["account-type"];
+     if($user_model == "admin"){
+        include_once('pages/adminheader.php');
+     }
+    else if($user_model == "user"){
+        include_once('pages/userheader.php');       
+    }
+    else{
+       include_once('pages/header.php');
+    }
 ?>
     <main>
 
