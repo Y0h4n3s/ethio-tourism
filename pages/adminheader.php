@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
     <header>
         <nav>
             <img  alt="logo" srcset="">
@@ -10,7 +10,7 @@
                 <li><a href="./packages.php">Packages</a></li>
                 <li><a href="./addadmin.php">Add Admin</a></li>
                 <li><a href="./dashboard.php">Dashboard</a></li>
-                <li><a href="./signout.php">Log out</a></li>
+                <li><a href="./logout.php">Log out</a></li>
             </ul>
         </nav>
     </header>

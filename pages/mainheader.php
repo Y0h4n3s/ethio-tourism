@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
     <header>
         <nav>
             <img  alt="logo" srcset="">

@@ -1,35 +1,20 @@
-
-<?php
-session_start();
-?>
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-    <title>Signup</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
-    
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
 
-<?php 
-
-include_once('pages/header.php');
-?>
-
-        <main>
+<?php include_once("pages/header.php")?>
+<main>
         <div class="form_container">
-        <h2> WEL COME </h2>
-            <form  method="POST" name="signup-form" action="signup.php" >
-            <div class = 'row'>
-            <input name="firstname-input" type="firstname" />
-            <label for="firstname-input">Firstname</label>
-            </div>
-            <div class = 'row'>
-            <input name="lastname-input" />
-            <label for="lastname-input">Lastname</label>
-            </div>
+        <h2> Add Admin </h2>
+            <form  method="POST" name="signup-form" action="addadmin.php" >
+           
+           
             <div class = 'row'>
             <input name="username-input" />
             <label for="username-input">Username</label>
@@ -40,7 +25,7 @@ include_once('pages/header.php');
             </div>
             <div class = 'row'>    
             <input name="phonenumber-input" />
-            <label for="phonenumberinput">Phonenumber</label>
+            <label for="phonenumber-input">Phonenumber</label>
             </div>
             <div class = 'row'>   
             <input name="password-input" type="password" />
@@ -53,14 +38,15 @@ include_once('pages/header.php');
 <?php
 require_once("connection.php");
 
-if (isset($_POST['username-input']) && isset($_POST['password-input']) && isset($_POST["email-input"])){
+if (isset($_POST['username-input']) && isset($_POST['password-input']) && isset($_POST["email-input"])&& isset($_POST["phonenumber-input"])){
    
     
     $username = $_POST['username-input'];
     $password = $_POST['password-input'];
     $email = $_POST['email-input'];
+    $phone_no = $_POST['phonenumber-input'];
     
-    $check_username_sql = "SELECT * FROM users WHERE username = '$username';";
+    $check_username_sql = "SELECT * FROM admin WHERE username = '$username';";
     
     $result = mysqli_query($conn,$check_username_sql);
    
@@ -69,12 +55,13 @@ if (isset($_POST['username-input']) && isset($_POST['password-input']) && isset(
     if ( $data['username'] == $username) {
         echo "username exists";
     } else {
-        $insert_sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email');";
+        $insert_sql = "INSERT INTO admin (username, password, email,phone_no) VALUES ('$username', '$password', '$email','$phone_no');";
         $result = mysqli_query($conn,$insert_sql);
 
         if ($result) {
-        $_SESSION["account-type"] = "user";  
-       header("location:index.php"); 
+            echo '<script type="text/javascript">
+            window.onload = function () { alert("Admin is ADDED"); }
+            </script>';
         } else { 
             echo "<p style='color: red;'>"."registration failed"."</p>";
         }
@@ -83,12 +70,7 @@ if (isset($_POST['username-input']) && isset($_POST['password-input']) && isset(
 ?>
         </main>
 
+<?php include_once("footer.php")?>
     
-        <?php 
-
-include_once('footer.php');
-
-
-?>
-    </body>
+</body>
 </html>
