@@ -19,9 +19,11 @@ include_once('pages/header.php');
 
 <?php 
     
+     require_once("connection.php");
      $filter = false ; 
      
-     $get_hotels_sql = "SELECT * FROM hotels WHERE 1;";
+
+     $get_hotels_sql = "SELECT * FROM hotels ;";
      $all_hotels = mysqli_query($conn,$get_hotels_sql);
      echo("<div class ='container'>");
      while ($row = mysqli_fetch_assoc($all_hotels)) {
