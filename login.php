@@ -40,8 +40,11 @@ include_once('pages/header.php');
 
             
 <?php
+echo "<h1>checking</h1>";
 require_once("connection.php");
 include_once("pages/model.php");
+
+
 if ($_POST['username-input']!=null &&$_POST['password-input']!=null){
 
     

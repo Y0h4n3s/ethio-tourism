@@ -19,18 +19,8 @@ include_once('pages/header.php');
 
 <?php 
     
-     require_once("connection.php");
      $filter = false ; 
      
-    function hotelss(){
-        return $hotels_result;
-    }
-    function hotels_with_filter($filters){
-        $get_hotels_sql = "SELECT * FROM hotels WHERE location == '$filters';";
-        $hotels_result = mysqli_query($conn,$get_hotels_sql);
-        return $hotels_data;
-    }
-    
      $get_hotels_sql = "SELECT * FROM hotels WHERE 1;";
      $all_hotels = mysqli_query($conn,$get_hotels_sql);
      echo("<div class ='container'>");
